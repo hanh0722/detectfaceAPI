@@ -12,7 +12,7 @@ const app = express();
 const db = Knex({
     client: 'pg',
         connection: {
-        host : '127.0.0.1',
+        host : 'postgresql-shallow-53415',
         user : 'postgres',
         password : '2207',
         database : 'smartbrain'
