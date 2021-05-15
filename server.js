@@ -13,10 +13,8 @@ const app = express();
 const db = Knex({
     client: 'pg',
         connection: {
-        connectionString: process.env.DATABASE_URL,
-        ssl: {
-            rejectUnauthorized: false
-        }
+        connectionString : process.env.DATABASE_URL,
+        ssl: false
     }
 })
 
