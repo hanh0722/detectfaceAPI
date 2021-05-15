@@ -1,7 +1,6 @@
 import express from 'express';
 import bodyparser from 'body-parser';
 import bcrypt, { hash } from 'bcrypt-nodejs';
-import pg from 'pg';
 import cors from 'cors';
 import Knex from 'knex';
 import Clarifai from 'clarifai';
@@ -85,7 +84,7 @@ app.post('/register', (req, res) =>{
        .then(trx.commit)
        .catch(trx.rollback);
    })
-   .catch(err => res.status(404).json('err'));
+   .catch(err => res.status(404).json('unable to register'));
 })
 
 app.get('/profile/:id', (req, res) =>{
