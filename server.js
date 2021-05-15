@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyparser from 'body-parser';
 import bcrypt, { hash } from 'bcrypt-nodejs';
+import pg from 'pg';
 import cors from 'cors';
 import Knex from 'knex';
 import Clarifai from 'clarifai';
